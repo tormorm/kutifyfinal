@@ -2,27 +2,27 @@ const WhatIsNot = () => {
   const sponsors = [
     {
       name: "Oliver Niiske",
-      role: "asutaja ja projektijuht",
-      description: "toetab kutify arendust, visiooni ja igapäevast tööd.",
+      role: "ASUTAJA",
+      description: "tan niiske",
       emoji: "🎬",
     },
     {
-      name: "Keron Road Kebab",
-      role: "kogukonna toetaja",
-      description: "aitab hoida meeskonna motiveerituna ja energia kõrgel.",
-      emoji: "🌯",
+      name: "Alexsander Urbala",
+      role: "TOETAJA",
+      description: "tema soovitus",
+      emoji: "🔥",
     },
     {
-      name: "LARG õpilased",
-      role: "testijad ja ideede allikas",
-      description: "jagavad ausat tagasisidet ja pakuvad uusi mõtteid.",
-      emoji: "🏫",
+      name: "???",
+      role: "???",
+      description: "midagi tuleb siia",
+      emoji: "❓",
     },
     {
-      name: "Kutify kogukond",
-      role: "kasutajad ja fännid",
-      description: "teie toetus aitab meil igal nädalal paremaks saada.",
-      emoji: "🫶",
+      name: "Kutify pusa kandjad",
+      role: "GOATED VANAD",
+      description: "ülejäänud merch coming soon",
+      emoji: "🧢",
     },
   ];
 
@@ -36,7 +36,7 @@ const WhatIsNot = () => {
             <span className="gradient-text">keda me sponsoreerime</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            inimesed, kes aitavad kutifyl kasvada ja kogukonda tugevamaks teha.
+            respect
           </p>
         </div>
 

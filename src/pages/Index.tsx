@@ -21,9 +21,12 @@ const Index = () => {
             <p className="text-sm md:text-base text-foreground mb-3">kui on häid või absurdseid ideid videote vms jaoks siis kirjuta</p>
             <a
               href="mailto:feedback@kutify.ee?subject=Kutify%20soovitus"
-              className="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium bg-primary text-primary-foreground hover:opacity-90 transition"
+              className="relative inline-flex group p-[2px] rounded-xl border border-white/20"
             >
-              Kirjuta meile
+              <span className="absolute -inset-2 rounded-xl kutify-gradient blur-xl opacity-60 group-hover:opacity-90 transition duration-500" />
+              <span className="relative flex items-center justify-center px-8 py-4 rounded-[10px] bg-black/40 text-white text-lg font-semibold hover:bg-black/60 transition">
+                Kirjuta meile
+              </span>
             </a>
           </div>
         </section>

@@ -8,7 +8,7 @@ const WhatIsNot = () => {
     },
     {
       name: "Alexsander Urbala",
-      role: "TOETAJA",
+      role: "SASS",
       description: "tema soovitus",
       emoji: "🔥",
     },
@@ -22,7 +22,7 @@ const WhatIsNot = () => {
       name: "Kutify pusa kandjad",
       role: "GOATED VANAD",
       description: "ülejäänud merch coming soon",
-      emoji: "🧢",
+      emoji: "👕",
     },
   ];
 

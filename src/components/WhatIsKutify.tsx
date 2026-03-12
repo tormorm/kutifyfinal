@@ -17,7 +17,7 @@ const WhatIsKutify = () => {
     },
     {
       emoji: "❓",
-      title: "Coming soon",
+      title: "???",
       description: "yes"
     }
   ];

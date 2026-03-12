@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kutify gradient */
+.kutify-gradient {
+  background: linear-gradient(135deg, #ff3bd4 0%, #8b5cf6 45%, #22d3ee 100%);
+}
+
+
+/* Kutify Design System - intentionally broken AI vibes */
+
+@layer base {
+  :root {
+    --background: 240 15% 5%;
+    --foreground: 210 20% 90%;
+
+    --card: 240 12% 8%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 240 12% 8%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 280 80% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 210 20% 85%;
+
+    --muted: 240 8% 15%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 195 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 18%;
+    --input: 240 10% 15%;
+    --ring: 280 80% 60%;
+
+    --radius: 0.75rem;
+
+    /* Kutify custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(280 80% 60%), hsl(195 90% 55%));
+    --gradient-glow: linear-gradient(135deg, hsl(280 80% 60% / 0.4), hsl(195 90% 55% / 0.4));
+    --gradient-text: linear-gradient(90deg, hsl(280 80% 70%), hsl(195 90% 65%));
+    --shadow-glow: 0 0 60px hsl(280 80% 60% / 0.3);
+    --shadow-accent: 0 0 40px hsl(195 90% 55% / 0.2);
+
+    --sidebar-background: 240 12% 8%;
+    --sidebar-foreground: 210 20% 85%;
+    --sidebar-primary: 280 80% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 12%;
+    --sidebar-accent-foreground: 210 20% 85%;
+    --sidebar-border: 240 10% 18%;
+    --sidebar-ring: 280 80% 60%;
+  }
+
+  .dark {
+    --background: 240 15% 5%;
+    --foreground: 210 20% 90%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-bg {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-border {
+    position: relative;
+    background: hsl(var(--card));
+  }
+	
+  .kutify-gradient {
+  background: linear-gradient(135deg, #ff3bd4 0%, #8b5cf6 45%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  }
+
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: var(--gradient-primary);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+
+  /* Glitch effect for that broken vibe */
+  @keyframes glitch {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-2px, 1px); }
+    40% { transform: translate(2px, -1px); }
+    60% { transform: translate(-1px, -1px); }
+    80% { transform: translate(1px, 1px); }
+  }
+
+  .glitch-hover:hover {
+    animation: glitch 0.3s ease-in-out;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+}

@@ -1,0 +1,1 @@
+import{r as e}from"./index-Bt1lOjLO.js";const n=()=>{const[t,r]=e.useState([]);e.useState(""),e.useState(!1);const o=e.useRef(null),a=()=>{var s;(s=o.current)==null||s.scrollIntoView({behavior:"smooth"})};e.useEffect(()=>{a()},[t])};export{n as default};
